@@ -1,0 +1,267 @@
+body {
+  font-family: 'Poppins', 'Roboto', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  background: #333;
+  height: 100vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-logo {
+  font-size: 11rem;
+  color: rgba(232, 232, 232, 0.75);
+  font-family: 'Poppins';
+  font-weight: 700;
+  .logo {
+    display: inline-block;
+  }
+}
+
+.add-btn {
+  width: 132px;
+  height: 132px;
+  border-radius: 132px;
+  background-color: rgba(232, 232, 232, 0.15);
+  color: rgba(232, 232, 232, 0.35);
+  font-family: 'Poppins';
+  font-weight: 400;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  top: -64px;
+  vertical-align: bottom;
+  line-height: 140px;
+  transition: all 0.25s ease-in-out;
+  &:hover {
+    color: rgba(232, 232, 232, 0.95);
+    margin: 0 40px;
+    cursor: pointer;
+  }
+}
+
+.todo-list {
+  border-radius: 100px;
+  text-align: center;
+  .small-btn {
+    width: 92px;
+    height: 92px;
+    border-radius: 92px;
+    font-size: 4rem;
+    background-color: rgba(232, 232, 232, 0.15);
+    color: rgba(232, 232, 232, 0.35);
+    font-family: 'Poppins';
+    font-weight: 400;
+    display: inline-block;
+    text-align: center;
+    line-height: 100px;
+    transition: all 0.25s ease-in-out;
+    &:hover {
+      color: rgba(232, 232, 232, 0.95);
+      cursor: pointer;
+    }
+  }
+}
+
+.todo {
+  background-color: rgba(232, 232, 232, 0.05);
+  color: rgba(232, 232, 232, 0.85);
+  padding: 16px 24px 16px 40px;
+  font-size: 2rem;
+  display: flex;
+  min-width: 536px;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 24px;
+  border-radius: 50px;
+  transition: all 0.10s ease-in-out;
+  button {
+    opacity: 0;
+  }
+  &:hover {
+    // box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.15);
+    button {
+      height: 43px;
+      width: 43px;
+      border-radius: 43px;
+      background-color: rgba(232, 232, 232, 0.05);
+      outline: none;
+      opacity: 1;
+      border: none;
+      color: rgba(232, 232, 232, 0.50);
+      font-size: 1.5rem;
+      margin-left: 12px;
+      &:hover {
+        color: rgba(232, 232, 232, 1);
+        background-color: rgba(232, 232, 232, 0.35);
+      }
+    }
+  }
+}
+
+.input {
+  animation-name: slide;
+  animation-duration: .20s;
+  animation-timing-function: ease-in-out;
+  border: none;
+  color: rgba(232, 232, 232, 0.85);
+  background-color: rgba(232, 232, 232, 0.15);
+  font-size: 2rem;
+  height: 44px;
+  width: 520px;
+  padding: 24px 40px;
+  border-radius: 100px;
+  transition: all 0.25s ease-in-out;
+  &:hover {
+    background-color: rgba(232, 232, 232, 0.25);
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+    background-color: rgba(232, 232, 232, 0.35);
+  }
+}
+
+.hint {
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  color: rgba(232, 232, 232, 0.25);
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes slide {
+  0% {
+    height: 84px;
+    width: 84px;
+    padding: 24px 40px;
+    margin: 0 40px;
+  }
+  50% {
+    height: 84px;
+  }
+  100% {
+    height: 44px;
+    width: 520px;
+    padding: 24px 40px;
+    margin: 0;
+  }
+}
+
+@keyframes slide {
+  0% {
+    height: 84px;
+    width: 84px;
+    padding: 24px 40px;
+    margin: 0 40px;
+  }
+  50% {
+    height: 84px;
+  }
+  100% {
+    height: 44px;
+    width: 520px;
+    padding: 24px 40px;
+    margin: 0;
+  }
+}
+
+@-moz-keyframes slide {
+  0% {
+    height: 84px;
+    width: 84px;
+    padding: 24px 40px;
+    margin: 0 40px;
+  }
+  50% {
+    height: 84px;
+  }
+  100% {
+    height: 44px;
+    width: 520px;
+    padding: 24px 40px;
+    margin: 0;
+  }
+}
+
+@-webkit-keyframes slide {
+  0% {
+    height: 84px;
+    width: 84px;
+    padding: 24px 40px;
+    margin: 0 40px;
+  }
+  50% {
+    height: 84px;
+  }
+  100% {
+    height: 44px;
+    width: 520px;
+    padding: 24px 40px;
+    margin: 0;
+  }
+}
+
+@-o-keyframes slide {
+  0% {
+    height: 84px;
+    width: 84px;
+    padding: 24px 40px;
+    margin: 0 40px;
+  }
+  50% {
+    height: 84px;
+  }
+  100% {
+    height: 44px;
+    width: 520px;
+    padding: 24px 40px;
+    margin: 0;
+  }
+}
+
+@-ms-keyframes slide {
+  0% {
+    height: 84px;
+    width: 84px;
+    padding: 24px 40px;
+    margin: 0 40px;
+  }
+  50% {
+    height: 84px;
+  }
+  100% {
+    height: 44px;
+    width: 520px;
+    padding: 24px 40px;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .todo-logo {
+    font-size: 4rem;
+    color: rgba(232, 232, 232, 0.75);
+  }
+  .add-btn {
+    font-size: 3.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: rgba(232, 232, 232, 0.15);
+    color: rgba(232, 232, 232, 0.35);
+    position: relative;
+    margin: 0 4px;
+    top: -23px;
+    vertical-align: bottom;
+    line-height: 55px;
+  }
+}
