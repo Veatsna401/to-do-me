@@ -1,5 +1,10 @@
 import React from 'react';
 
+
+// I like this component, nice and simple
+// makes sense what ur passing in
+
+// might want to move params onto separate lines
 const TodoListItem = ({todo, index, completeTodo, removeTodo}) => {
   return (
     <div
