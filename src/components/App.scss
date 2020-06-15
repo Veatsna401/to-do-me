@@ -4,6 +4,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  overflow-x:hidden;
+}
+
 .app {
   background: #333;
   height: 100vh;
@@ -84,7 +88,6 @@ body {
     opacity: 0;
   }
   &:hover {
-    // box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.15);
     button {
       height: 43px;
       width: 43px;
@@ -263,5 +266,26 @@ body {
     top: -23px;
     vertical-align: bottom;
     line-height: 55px;
+  }
+
+  .input {
+    width: 60vw;
+  }
+
+  .todo {
+    width: 250px;
+    min-width: 250px;
+    button {
+      height: 43px;
+      width: 43px;
+      border-radius: 43px;
+      background-color: rgba(232, 232, 232, 0.05);
+      outline: none;
+      opacity: 1;
+      border: none;
+      color: rgba(232, 232, 232, 0.50);
+      font-size: 1.5rem;
+      margin-left: 12px;
+    }
   }
 }
