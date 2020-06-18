@@ -52,7 +52,7 @@ body {
 .todo-list {
   border-radius: 100px;
   text-align: center;
-  .small-btn {
+  .big-btn {
     width: 92px;
     height: 92px;
     border-radius: 92px;
@@ -72,6 +72,10 @@ body {
   }
 }
 
+.btn-actions {
+  display: inline-flex;
+}
+
 .todo {
   background-color: rgba(232, 232, 232, 0.05);
   color: rgba(232, 232, 232, 0.85);
@@ -84,14 +88,14 @@ body {
   margin-bottom: 24px;
   border-radius: 50px;
   transition: all 0.10s ease-in-out;
-  button {
+  .small-btn {
     opacity: 0;
   }
   &:hover {
-    button {
-      height: 43px;
-      width: 43px;
-      border-radius: 43px;
+    .small-btn {
+      height: 48px;
+      width: 48px;
+      border-radius: 48px;
       background-color: rgba(232, 232, 232, 0.05);
       outline: none;
       opacity: 1;
@@ -99,6 +103,7 @@ body {
       color: rgba(232, 232, 232, 0.50);
       font-size: 1.5rem;
       margin-left: 12px;
+      line-height: 48PX;
       &:hover {
         color: rgba(232, 232, 232, 1);
         background-color: rgba(232, 232, 232, 0.35);
@@ -275,7 +280,7 @@ body {
   .todo {
     width: 250px;
     min-width: 250px;
-    button {
+    .small-btn {
       height: 43px;
       width: 43px;
       border-radius: 43px;
