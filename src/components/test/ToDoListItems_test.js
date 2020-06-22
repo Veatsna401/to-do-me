@@ -17,6 +17,7 @@ const TodoListItem = ({
       return;
     }
     setDisabled(true);
+    return;
   };
 
   const handleSubmit = (e) => {
@@ -29,6 +30,7 @@ const TodoListItem = ({
     <div className="todo">
       <form onSubmit={handleSubmit}>
         <input
+          id="myInput"
           disabled={disabled}
           style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}
           type="text"
@@ -36,17 +38,11 @@ const TodoListItem = ({
           value={value}
           onChange={e => setValue(e.target.value)}
         />
-        { disabled ?
-          <div className="btn-actions">
-            <div className="small-btn" onClick={() => removeTodo(index)}><i className="fal fa-trash"></i></div>
-            <div className="small-btn" onClick={() => editTodo()}><i className="fal fa-pencil"></i></div>
-            <div className="small-btn" onClick={() => completeTodo(index)}><i className={todo.isCompleted ? "fal fa-undo" : "fal fa-check"}></i></div>
-          </div>
-          :
-          <div className="btn-actions">
-            <div className="small-edit-btn" onClick={() => editTodo()}>SAVE CHANGE</div>
-          </div>
-        }
+        <div className="btn-actions">
+          <div className="small-btn" id="edit" onClick={() => editTodo()}><i className={disabled ? "fal fa-pencil" : "fal fa-save"}></i></div>
+          <div className="small-btn" onClick={() => completeTodo(index)}><i className={todo.isCompleted ? "fal fa-undo" : "fal fa-check"}></i></div>
+          <div className="small-btn" onClick={() => removeTodo(index)}><i className="fal fa-times"></i></div>
+        </div>
       </form>
     </div>
   );

@@ -22,10 +22,11 @@ const TodoList = () => {
     const newTodos = [...todos];
     if (todos[todoId].isCompleted) {
       todos[todoId].isCompleted = false;
+      setTodos(newTodos);
     } else {
       todos[todoId].isCompleted = true;
+      setTodos(newTodos);
     }
-    setTodos(newTodos);
   };
 
   const removeTodo = (todoId) => {
