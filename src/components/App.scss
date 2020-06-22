@@ -113,8 +113,15 @@ body {
   }
 }
 
+.todo-done {
+  background-color: rgba(232, 232, 232, 0.01);
+}
+
 .todo {
   background-color: rgba(232, 232, 232, 0.05);
+}
+
+.todo, .todo-done {
   color: rgba(232, 232, 232, 0.85);
   width: 600px;
   font-size: 1.5rem;
@@ -164,14 +171,11 @@ body {
   border-radius: 100px;
   transition: all 0.10s ease-in-out;
   &:hover {
-    // background-color: rgba(232, 232, 232, 0.25);
     cursor: pointer;
   }
   &:focus {
     outline: none;
     color: white;
-    // background-color: rgba(232, 232, 232, 0);
-    // box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.15);
   }
   &:disabled {
     background-color: rgba(232, 232, 232, 0);

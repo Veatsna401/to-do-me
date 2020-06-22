@@ -26,11 +26,11 @@ const TodoListItem = ({
   };
 
   return (
-    <div className="todo">
+    <div className={ todo.isCompleted ? "todo-done" : "todo" }>
       <form onSubmit={handleSubmit}>
         <input
           disabled={disabled}
-          style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}
+          style={{ textDecoration: todo.isCompleted ? "line-through" : "" , color: todo.isCompleted ? "rgba(255, 255, 255, 0.15)" : "" }}
           type="text"
           className="input"
           value={value}
