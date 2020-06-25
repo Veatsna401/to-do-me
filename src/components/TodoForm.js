@@ -2,7 +2,9 @@ import React, {useState} from 'react';
 
 const TodoForm = ({
   addTodo,
-  showForm
+  showForm,
+  count,
+  setCount
   }) => {
   const [value, setValue] = useState("");
 
@@ -10,6 +12,7 @@ const TodoForm = ({
     e.preventDefault();
     if (!value) return;
     addTodo(value);
+    setCount(count + 1);
     setValue("");
   };
 

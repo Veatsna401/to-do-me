@@ -192,6 +192,35 @@ body {
   color: rgba(232, 232, 232, 0.5);
 }
 
+.tracker-container {
+  display: flex;
+  align-items: center;
+  width: 536px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: rgba(232, 232, 232, 0.025);
+  margin-bottom: 16px;
+  padding: 8px 32px;
+  .task-counter {
+    width: 280px;
+    color: rgba(232, 232, 232, 0.50);
+  }
+  .progress-bar {
+    background-color: rgba(232, 232, 232, 0.15);
+    width: 100%;
+    border-radius: 50px;
+    .task-done-bar {
+      color: rgba(224, 157, 0, 0);
+      border-radius: 50px;
+      background-color: rgba(224, 157, 0, 1);
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
 @keyframes slide {
   0% {
     height: 84px;
