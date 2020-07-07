@@ -54,17 +54,24 @@ const TodoList = () => {
       />
       <div className="todo-list">
         {todos.map((todo, index) => (
-          <TodoListItem
-            key={todo.id}
-            index={index}
-            todo={todo.text}
-            disabled={disabled}
-            setDisabled={setDisabled}
-            updateTodo={updateTodo}
-            editTodo={editTodo}
-            completeTodo={completeTodo}
-            removeTodo={removeTodo}
-          />
+          { showForm(id) ?
+            <TodoForm
+              addTodo={addTodo}
+              currentTodo={current}
+            />
+            :
+            <TodoListItem
+              key={todo.id}
+              index={index}
+              todo={todo}
+              disabled={disabled}
+              setDisabled={setDisabled}
+              updateTodo={updateTodo}
+              editTodo={editTodo}
+              completeTodo={completeTodo}
+              removeTodo={removeTodo}
+            />
+          }
         ))}
         <ComponentToggler>
           <TodoForm

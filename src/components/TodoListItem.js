@@ -4,26 +4,22 @@ const TodoListItem = ({
     todo,
     index,
     updateTodo,
+    editTodo,
+    disabled,
+    setDisabled,
     completeTodo,
     removeTodo
   }) => {
 
   const [value, setValue] = useState(todo.addedTodo);
-  const [disabled, setDisabled] = useState(true);
-
-  const editTodo = (todoId) => {
-    if (disabled) {
-      setDisabled(false);
-      return;
-    }
-    setDisabled(true);
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     updateTodo(value);
     setDisabled(true);
   };
+
+  // Think about setting this section uop where it starts as a DIV, then swaps into a form. That firm should have state to hold its value. And should sweitch back to a div...once you save/update.
 
   return (
     <div className={ todo.isCompleted ? "todo-done" : "todo" }>
